@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.25;
 
 import '../IAssert.sol';
 import './IERC20.sol';
@@ -15,7 +15,7 @@ contract ERC20Test {
   }
 
   function nameTest() internal view {
-    require(asserts.equal(token.name(), 'Example Tizoken'), 'name mismatch'); 
+    require(asserts.equal(token.name(), 'Example Token'), 'name mismatch'); 
   }
 
   function run() external view {

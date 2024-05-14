@@ -1,6 +1,6 @@
 compile_solidity_assert:
 	@echo "compiling Assert contract source to .abi and .bin files"
-	@solc -o ./test/ --abi --bin --overwrite ./test/Assert.sol
+	@solc --evm-version paris -o ./test/ --abi --bin --overwrite ./test/Assert.sol
 
 compile_go_assert:
 	@echo "compiling Assert .abi and .bin files to go bindings, writing to pkg/testing/unit"
@@ -8,8 +8,8 @@ compile_go_assert:
 
 compile_solidity_erc20:
 	@echo "compiling test/erc20 solidity sources to .abi and .bin files"
-	@solc -o ./test/erc20 --abi --bin --overwrite ./test/erc20/ERC20.sol
-	@solc -o ./test/erc20 --abi --bin --overwrite ./test/erc20/ERC20Test.sol
+	@solc --evm-version paris -o ./test/erc20 --abi --bin --overwrite ./test/erc20/ERC20.sol
+	@solc --evm-version paris -o ./test/erc20 --abi --bin --overwrite ./test/erc20/ERC20Test.sol
 
 compile_go_erc20:
 	@echo "compiling test/erc20 .abi and .bin files to go bindings, writing to pkg/testing/unit/erc20"
