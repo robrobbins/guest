@@ -1,6 +1,8 @@
 package erc20
 
 import (
+  "math/big"
+
 	"github.com/robrobbins/guest/pkg/testing/unit"
 )
 
@@ -33,6 +35,15 @@ func Deploy(e *unit.Env) (*Dep, error) {
 	}
 
 	e.Blockchain.Commit()
+
+  // mint 1M EXT with admin as the owner
+  _, err = ercContract.Mint(e.Admin.Opts, big.NewInt(1000000))
+
+	if err != nil {
+		return nil, err
+	}
+
+  e.Blockchain.Commit()
 
 	return &Dep{
 		ERC20:     ercContract,

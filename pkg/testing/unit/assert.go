@@ -31,8 +31,8 @@ var (
 
 // AssertMetaData contains all meta data concerning the Assert contract.
 var AssertMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"a\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"b\",\"type\":\"string\"}],\"name\":\"equal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"a\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"b\",\"type\":\"bytes32\"}],\"name\":\"equal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}]",
-	Bin: "0x6080604052348015600f57600080fd5b506103318061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806346bdca9a1461003b578063df6ea8cf1461006b575b600080fd5b61005560048036038101906100509190610176565b61009b565b6040516100629190610212565b60405180910390f35b61008560048036038101906100809190610263565b6100fa565b6040516100929190610212565b60405180910390f35b600082826040516020016100b09291906102e2565b6040516020818303038152906040528051906020012085856040516020016100d99291906102e2565b60405160208183030381529060405280519060200120149050949350505050565b6000818314905092915050565b600080fd5b600080fd5b600080fd5b600080fd5b600080fd5b60008083601f84011261013657610135610111565b5b8235905067ffffffffffffffff81111561015357610152610116565b5b60208301915083600182028301111561016f5761016e61011b565b5b9250929050565b600080600080604085870312156101905761018f610107565b5b600085013567ffffffffffffffff8111156101ae576101ad61010c565b5b6101ba87828801610120565b9450945050602085013567ffffffffffffffff8111156101dd576101dc61010c565b5b6101e987828801610120565b925092505092959194509250565b60008115159050919050565b61020c816101f7565b82525050565b60006020820190506102276000830184610203565b92915050565b6000819050919050565b6102408161022d565b811461024b57600080fd5b50565b60008135905061025d81610237565b92915050565b6000806040838503121561027a57610279610107565b5b60006102888582860161024e565b92505060206102998582860161024e565b9150509250929050565b600081905092915050565b82818337600083830152505050565b60006102c983856102a3565b93506102d68385846102ae565b82840190509392505050565b60006102ef8284866102bd565b9150819050939250505056fea26469706673582212203773926595d6b2e0a12b5e24d6e52c66dbd3727acca694904b92545e85cf9c8964736f6c63430008190033",
+	ABI: "[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"name\":\"equal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"a\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"b\",\"type\":\"string\"}],\"name\":\"equal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"a\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"b\",\"type\":\"bytes32\"}],\"name\":\"equal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}]",
+	Bin: "0x6080604052348015600f57600080fd5b506103ef8061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063301916261461004657806346bdca9a14610076578063df6ea8cf146100a6575b600080fd5b610060600480360381019061005b919061018f565b6100d6565b60405161006d91906101ea565b60405180910390f35b610090600480360381019061008b919061026a565b6100e3565b60405161009d91906101ea565b60405180910390f35b6100c060048036038101906100bb9190610321565b610142565b6040516100cd91906101ea565b60405180910390f35b6000818314905092915050565b600082826040516020016100f89291906103a0565b6040516020818303038152906040528051906020012085856040516020016101219291906103a0565b60405160208183030381529060405280519060200120149050949350505050565b6000818314905092915050565b600080fd5b600080fd5b6000819050919050565b61016c81610159565b811461017757600080fd5b50565b60008135905061018981610163565b92915050565b600080604083850312156101a6576101a561014f565b5b60006101b48582860161017a565b92505060206101c58582860161017a565b9150509250929050565b60008115159050919050565b6101e4816101cf565b82525050565b60006020820190506101ff60008301846101db565b92915050565b600080fd5b600080fd5b600080fd5b60008083601f84011261022a57610229610205565b5b8235905067ffffffffffffffff8111156102475761024661020a565b5b6020830191508360018202830111156102635761026261020f565b5b9250929050565b600080600080604085870312156102845761028361014f565b5b600085013567ffffffffffffffff8111156102a2576102a1610154565b5b6102ae87828801610214565b9450945050602085013567ffffffffffffffff8111156102d1576102d0610154565b5b6102dd87828801610214565b925092505092959194509250565b6000819050919050565b6102fe816102eb565b811461030957600080fd5b50565b60008135905061031b816102f5565b92915050565b600080604083850312156103385761033761014f565b5b60006103468582860161030c565b92505060206103578582860161030c565b9150509250929050565b600081905092915050565b82818337600083830152505050565b60006103878385610361565b935061039483858461036c565b82840190509392505050565b60006103ad82848661037b565b9150819050939250505056fea264697066735822122096b164e81e742e19f331ee95b2f98ae49f1b8b4eb8ea4bf27382a1dcd445ee6e64736f6c63430008190033",
 }
 
 // AssertABI is the input ABI used to generate the binding from.
@@ -202,10 +202,10 @@ func (_Assert *AssertTransactorRaw) Transact(opts *bind.TransactOpts, method str
 	return _Assert.Contract.contract.Transact(opts, method, params...)
 }
 
-// Equal is a free data retrieval call binding the contract method 0x46bdca9a.
+// Equal is a free data retrieval call binding the contract method 0x30191626.
 //
-// Solidity: function equal(string a, string b) pure returns(bool)
-func (_Assert *AssertCaller) Equal(opts *bind.CallOpts, a string, b string) (bool, error) {
+// Solidity: function equal(uint256 a, uint256 b) pure returns(bool)
+func (_Assert *AssertCaller) Equal(opts *bind.CallOpts, a *big.Int, b *big.Int) (bool, error) {
 	var out []interface{}
 	err := _Assert.contract.Call(opts, &out, "equal", a, b)
 
@@ -219,24 +219,24 @@ func (_Assert *AssertCaller) Equal(opts *bind.CallOpts, a string, b string) (boo
 
 }
 
-// Equal is a free data retrieval call binding the contract method 0x46bdca9a.
+// Equal is a free data retrieval call binding the contract method 0x30191626.
 //
-// Solidity: function equal(string a, string b) pure returns(bool)
-func (_Assert *AssertSession) Equal(a string, b string) (bool, error) {
+// Solidity: function equal(uint256 a, uint256 b) pure returns(bool)
+func (_Assert *AssertSession) Equal(a *big.Int, b *big.Int) (bool, error) {
 	return _Assert.Contract.Equal(&_Assert.CallOpts, a, b)
 }
 
-// Equal is a free data retrieval call binding the contract method 0x46bdca9a.
+// Equal is a free data retrieval call binding the contract method 0x30191626.
 //
-// Solidity: function equal(string a, string b) pure returns(bool)
-func (_Assert *AssertCallerSession) Equal(a string, b string) (bool, error) {
+// Solidity: function equal(uint256 a, uint256 b) pure returns(bool)
+func (_Assert *AssertCallerSession) Equal(a *big.Int, b *big.Int) (bool, error) {
 	return _Assert.Contract.Equal(&_Assert.CallOpts, a, b)
 }
 
-// Equal0 is a free data retrieval call binding the contract method 0xdf6ea8cf.
+// Equal0 is a free data retrieval call binding the contract method 0x46bdca9a.
 //
-// Solidity: function equal(bytes32 a, bytes32 b) pure returns(bool)
-func (_Assert *AssertCaller) Equal0(opts *bind.CallOpts, a [32]byte, b [32]byte) (bool, error) {
+// Solidity: function equal(string a, string b) pure returns(bool)
+func (_Assert *AssertCaller) Equal0(opts *bind.CallOpts, a string, b string) (bool, error) {
 	var out []interface{}
 	err := _Assert.contract.Call(opts, &out, "equal0", a, b)
 
@@ -250,16 +250,47 @@ func (_Assert *AssertCaller) Equal0(opts *bind.CallOpts, a [32]byte, b [32]byte)
 
 }
 
-// Equal0 is a free data retrieval call binding the contract method 0xdf6ea8cf.
+// Equal0 is a free data retrieval call binding the contract method 0x46bdca9a.
 //
-// Solidity: function equal(bytes32 a, bytes32 b) pure returns(bool)
-func (_Assert *AssertSession) Equal0(a [32]byte, b [32]byte) (bool, error) {
+// Solidity: function equal(string a, string b) pure returns(bool)
+func (_Assert *AssertSession) Equal0(a string, b string) (bool, error) {
 	return _Assert.Contract.Equal0(&_Assert.CallOpts, a, b)
 }
 
-// Equal0 is a free data retrieval call binding the contract method 0xdf6ea8cf.
+// Equal0 is a free data retrieval call binding the contract method 0x46bdca9a.
+//
+// Solidity: function equal(string a, string b) pure returns(bool)
+func (_Assert *AssertCallerSession) Equal0(a string, b string) (bool, error) {
+	return _Assert.Contract.Equal0(&_Assert.CallOpts, a, b)
+}
+
+// Equal1 is a free data retrieval call binding the contract method 0xdf6ea8cf.
 //
 // Solidity: function equal(bytes32 a, bytes32 b) pure returns(bool)
-func (_Assert *AssertCallerSession) Equal0(a [32]byte, b [32]byte) (bool, error) {
-	return _Assert.Contract.Equal0(&_Assert.CallOpts, a, b)
+func (_Assert *AssertCaller) Equal1(opts *bind.CallOpts, a [32]byte, b [32]byte) (bool, error) {
+	var out []interface{}
+	err := _Assert.contract.Call(opts, &out, "equal1", a, b)
+
+	if err != nil {
+		return *new(bool), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
+
+	return out0, err
+
+}
+
+// Equal1 is a free data retrieval call binding the contract method 0xdf6ea8cf.
+//
+// Solidity: function equal(bytes32 a, bytes32 b) pure returns(bool)
+func (_Assert *AssertSession) Equal1(a [32]byte, b [32]byte) (bool, error) {
+	return _Assert.Contract.Equal1(&_Assert.CallOpts, a, b)
+}
+
+// Equal1 is a free data retrieval call binding the contract method 0xdf6ea8cf.
+//
+// Solidity: function equal(bytes32 a, bytes32 b) pure returns(bool)
+func (_Assert *AssertCallerSession) Equal1(a [32]byte, b [32]byte) (bool, error) {
+	return _Assert.Contract.Equal1(&_Assert.CallOpts, a, b)
 }

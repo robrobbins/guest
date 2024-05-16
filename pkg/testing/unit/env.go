@@ -6,7 +6,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/core"
+	"github.com/ethereum/go-ethereum/core/types"
 )
 
 var chainId = big.NewInt(1337)
@@ -21,7 +21,7 @@ type Auth struct {
 // Env, holds Auth objects capable of signing transactions.
 // Also holds the Geth simulated backend.
 type Env struct {
-	Alloc      core.GenesisAlloc
+	Alloc      types.GenesisAlloc
 	Admin      *Auth
 	User1      *Auth
 	User2      *Auth
@@ -35,11 +35,12 @@ func NewEnv(b *big.Int) *Env {
 	pk, admin := NewAuth(chainId)
 	pk1, u1 := NewAuth(chainId)
 	pk2, u2 := NewAuth(chainId)
-	alloc := make(core.GenesisAlloc)
-	alloc[admin.From] = core.GenesisAccount{Balance: b}
-	alloc[u1.From] = core.GenesisAccount{Balance: b}
-	alloc[u2.From] = core.GenesisAccount{Balance: b}
+	alloc := make(types.GenesisAlloc)
+	alloc[admin.From] = types.Account{Balance: b}
+	alloc[u1.From] = types.Account{Balance: b}
+	alloc[u2.From] = types.Account{Balance: b}
 	// 2nd arg is a gas limit, a uint64. we'll use 4.7 million
+  // TODO deal with this deprecation (it has consequences in the env/dep)
 	bc := backends.NewSimulatedBackend(alloc, 4700000)
 
 	return &Env{

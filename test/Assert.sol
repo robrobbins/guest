@@ -11,6 +11,12 @@ contract Assert is IAssert {
     return(a == b);
   }
 
+  /// @param a uint of same value
+  /// @param b uint of same value
+  function equal(uint256 a, uint256 b) external pure returns (bool) {
+    return(a == b);
+  }
+
   /// @param a string of some value
   /// @param b string hash of some value
   function equal(string calldata a, string calldata b) external pure returns (bool) {

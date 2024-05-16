@@ -18,7 +18,12 @@ contract ERC20Test {
     require(asserts.equal(token.name(), 'Example Token'), 'name mismatch'); 
   }
 
+  function totalSupplyTest() internal view {
+    require(asserts.equal(token.totalSupply(), 1000000), 'total supply mismatch');
+  }
+
   function run() external view {
     nameTest();
+    totalSupplyTest();
   }
 }
